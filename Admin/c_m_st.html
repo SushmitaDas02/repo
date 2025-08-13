@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Mapped Courses — Admin</title>
+  <link rel="stylesheet" href="styles/sm.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Student Mapped Courses</h1>
+        <p class="lead">Manage which students are mapped to courses for a selected batch / semester.</p>
+      </div>
+
+      <div class="controls">
+        <details>
+          <summary class="btn">+ New Mapping</summary>
+          <div class="panel">
+            <form>
+              <div class="row">
+                <div>
+                  <label>Student *</label>
+                  <input name="student" placeholder="Select student" />
+                </div>
+                <div>
+                  <label>Course *</label>
+                  <input name="course" placeholder="Select course" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <label>Batch *</label>
+                  <input name="batch" placeholder="e.g. 2023" />
+                </div>
+                <div>
+                  <label>Academic Year *</label>
+                  <input name="ay" placeholder="e.g. 2023-24" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <label>Semester *</label>
+                  <select name="semester">
+                    <option>Semester 1</option>
+                    <option>Semester 2</option>
+                    <option>Semester 3</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Status *</label>
+                  <select name="status">
+                    <option>Active</option>
+                    <option>Inactive</option>
+                  </select>
+                </div>
+              </div>
+
+              <footer>
+                <button type="reset" class="btn ghost">Cancel</button>
+                <button type="submit" class="btn">Add Mapping</button>
+              </footer>
+            </form>
+          </div>
+        </details>
+
+        <button class="btn ghost">Import CSV</button>
+        <button class="btn">Export</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="filters">
+          <div class="search">
+            <label>Search</label>
+            <input type="search" placeholder="Search by student, course, mapping id..." />
+          </div>
+
+          <div class="select-wrap">
+            <label>Batch</label>
+            <select>
+              <option>All</option>
+              <option>2023</option>
+              <option>2022</option>
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <label>Semester</label>
+            <select>
+              <option>All</option>
+              <option>Semester 1</option>
+              <option>Semester 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>MappingID</th>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Batch</th>
+                <th>AY</th>
+                <th>Semester</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MAP-001</td>
+                <td>Asha Kumar</td>
+                <td>BSc Computer Science</td>
+                <td>2023</td>
+                <td>2023-24</td>
+                <td>Sem 1</td>
+                <td><span class="chip status-active">Active</span></td>
+                <td class="actions">
+                  <button class="action edit">Edit</button>
+                  <button class="action delete">Delete</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>MAP-002</td>
+                <td>Ravi Singh</td>
+                <td>BBA</td>
+                <td>2022</td>
+                <td>2022-23</td>
+                <td>Sem 4</td>
+                <td><span class="chip status-inactive">Inactive</span></td>
+                <td class="actions">
+                  <button class="action edit">Edit</button>
+                  <button class="action delete">Delete</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="card" aria-label="Mapping form">
+        <h3>Add / Edit Mapping</h3>
+        <form>
+          <div class="row">
+            <div>
+              <label>Student *</label>
+              <input name="student2" placeholder="Start typing student name..." />
+            </div>
+            <div>
+              <label>Course *</label>
+              <select name="course2">
+                <option>BSc Computer Science</option>
+                <option>BBA</option>
+                <option>BA English</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Batch *</label>
+              <input name="batch2" placeholder="e.g. 2023" />
+            </div>
+            <div>
+              <label>Academic Year *</label>
+              <input name="ay2" placeholder="e.g. 2023-24" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Semester *</label>
+              <select name="semester2">
+                <option>Semester 1</option>
+                <option>Semester 2</option>
+              </select>
+            </div>
+            <div>
+              <label>Status *</label>
+              <select name="status2">
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+          </div>
+          <div class="row full">
+            <label>Notes</label>
+            <input name="notes" placeholder="Optional notes..." />
+          </div>
+          <footer>
+            <button type="reset" class="btn ghost">Reset</button>
+            <button type="submit" class="btn">Save Mapping</button>
+          </footer>
+        </form>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>

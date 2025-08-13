@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="styles/rep.css">
+</head>
+<body>
+
+    <h1>Reports</h1>
+    <form class="filters">
+        <label>Department:
+            <select>
+                <option>Computer Science</option>
+                <option>Electronics</option>
+                <option>Mechanical</option>
+            </select>
+        </label>
+        <label>Course:
+            <select>
+                <option>Web Development</option>
+                <option>Data Structures</option>
+                <option>Thermodynamics</option>
+            </select>
+        </label>
+        <label>Academic Year:
+            <select>
+                <option>2024-25</option>
+                <option>2023-24</option>
+                <option>2022-23</option>
+            </select>
+        </label>
+        <label>Semester:
+            <select>
+                <option>1</option>
+                <option>2</option>
+            </select>
+        </label>
+        <label>Grade Range:
+            <select>
+                <option>All</option>
+                <option>A - B</option>
+                <option>C - D</option>
+            </select>
+        </label>
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <h2>Course-wise</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Students</th>
+            <th>Average Grade</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>50</td>
+            <td>B+</td>
+            <td>On Track</td>
+        </tr>
+        <tr>
+            <td>Data Structures</td>
+            <td>45</td>
+            <td>A</td>
+            <td>Attention</td>
+        </tr>
+        <tr class="subtotal">
+            <td colspan="4">Total Courses: 2</td>
+        </tr>
+    </table>
+
+    <h2>Student-wise</h2>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>Web Development</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>Data Structures</td>
+            <td>B+</td>
+        </tr>
+        <tr class="subtotal">
+            <td colspan="3">Total Students: 2</td>
+        </tr>
+    </table>
+
+    <h2>Faculty-wise</h2>
+    <table>
+        <tr>
+            <th>Faculty</th>
+            <th>Course</th>
+            <th>Students</th>
+        </tr>
+        <tr>
+            <td>Prof. Smith</td>
+            <td>Web Development</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Prof. Lee</td>
+            <td>Data Structures</td>
+            <td>45</td>
+        </tr>
+        <tr class="subtotal">
+            <td colspan="3">Total Faculty: 2</td>
+        </tr>
+    </table>
+
+</body>
+</html>

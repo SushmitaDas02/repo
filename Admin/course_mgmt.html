@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <link rel="stylesheet" href="styles/courses.css">
+</head>
+<body>
+        <h1>Course Management</h1>
+        <div class="container">
+        <section class="table-section">
+            <h2>Courses List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>CourseID</th>
+                        <th>Code</th>
+                        <th>Title</th>
+                        <th>Credits</th>
+                        <th>Department</th>
+                        <th>Semester</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>24SC1011</td>
+                        <td>Data Structures</td>
+                        <td>4</td>
+                        <td>CSE</td>
+                        <td>1</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>23UC1003</td>
+                        <td>Calculus</td>
+                        <td>3</td>
+                        <td>CSE</td>
+                        <td>1</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="form-section">
+            <h2>Add / Edit Course</h2>
+            <form>
+                <label for="code">Code*</label>
+                <input type="text" id="code" name="code" required>
+
+                <label for="title">Title*</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+
+                <label for="credits">Credits*</label>
+                <input type="number" id="credits" name="credits" required>
+
+                <label for="department">Department*</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="semester">Semester*</label>
+                <input type="number" id="semester" name="semester" required>
+
+                <label for="year">Year</label>
+                <input type="number" id="year" name="year">
+
+                <button type="submit" class="submit-btn">Save Course</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

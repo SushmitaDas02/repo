@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Management</title>
+    <link rel="stylesheet" href="styles/re.css">
+</head>
+<body>
+<div class="container">
+    <h1>Result Management</h1>
+    <section class="card upload-card">
+        <h2>Upload Results (CSV)</h2>
+        <p>Upload a CSV file containing results. File must include: Student, Course, Internal, External.</p>
+        <input type="file" id="csvUpload" accept=".csv">
+        <button class="btn upload-btn">Upload CSV</button>
+    </section>
+
+    <section class="card form-card">
+        <h2>Insert Result</h2>
+        <form>
+            <div class="form-row">
+                <label>Course *</label>
+                <input type="text" placeholder="Enter course name">
+            </div>
+            <div class="form-row">
+                <label>Student *</label>
+                <input type="text" placeholder="Enter student name">
+            </div>
+            <div class="form-row">
+                <label>Internal (0–30)</label>
+                <input type="number" min="0" max="30">
+            </div>
+            <div class="form-row">
+                <label>External (0–70)</label>
+                <input type="number" min="0" max="70">
+            </div>
+            <div class="form-row">
+                <label>Total</label>
+                <input type="number" readonly placeholder="Auto calculated">
+            </div>
+            <div class="form-row">
+                <label>Grade</label>
+                <input type="text" placeholder="Enter grade">
+            </div>
+            <div class="form-actions">
+                  <button type="reset" class="btn-reset">Reset</button>
+                  <button type="submit" class="btn-primary">Save</button>
+
+            </div>
+        </form>
+    </section>
+
+    <section class="card table-card">
+        <h2>Result List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ResultID</th>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Internal</th>
+                    <th>External</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                    <th>AY</th>
+                    <th>Semester</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RES-001</td>
+                    <td>Keerthi</td>
+                    <td>BSc Computer Science</td>
+                    <td>25</td>
+                    <td>65</td>
+                    <td>90</td>
+                    <td>A</td>
+                    <td>2023-24</td>
+                    <td>Sem 1</td>
+                    <td>
+                        <button class="btn edit-btn">Edit</button>
+                        <button class="btn delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>RES-002</td>
+                    <td>Suhmita Das</td>
+                    <td>CSE</td>
+                    <td>20</td>
+                    <td>50</td>
+                    <td>70</td>
+                    <td>B</td>
+                    <td>2023-24</td>
+                    <td>Sem 2</td>
+                    <td>
+                        <button class="btn edit-btn">Edit</button>
+                        <button class="btn delete-btn">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>
